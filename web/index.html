@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icons/favicon.ico"  type="image/ico"/>
+    <link rel="shortcut icon" href="./icons/favicon.ico"  type="image/ico"/>
+    <title>Bathymetry Map</title>
+    <!-- Mapbox -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 90px; width: 100%; }
+        
+        #legend {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+    </style>    
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="legend">
+        <h2>Depth:</h2>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #99ddff;"></div>
+          0 to -0.5
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #3399ff;"></div>
+          -0.5 to -1
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #0066ff;"></div>
+          -1 to -2
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #0000ff;"></div>
+          -2 to -5
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #000066;"></div>
+          -5 to -10
+        </div>
+      </div>
+</body>
+</html>
