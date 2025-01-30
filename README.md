@@ -18,7 +18,7 @@ In this step I used only GDAL for working with the data. I also could have used 
 This step utilizes GDAL for:
 - Extracting general raster information.
 - Reprojecting the DEM to a suitable coordinate system.
-- Converting raster data to vector format (shapefile) using `gdal.Polygonize()`.
+- Converting raster data to vector format (shapefile) using `gdal.Polygonize()` or `gdal_contour()`.
 
 **Note:**  
 If the `gdal.Polygonize()` function becomes a bottleneck, the process can be parallelized. For performance benchmarking, refer to [Mapbox GDAL Polygonize Test](https://github.com/mapbox/gdal-polygonize-test).
